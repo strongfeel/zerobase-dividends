@@ -10,11 +10,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class DividendsApplication {
 
     public static void main(String[] args) {
-        //SpringApplication.run(DividendsApplication.class, args);
+        SpringApplication.run(DividendsApplication.class, args);
 
         try {
             Connection connection = Jsoup.connect("https://finance.yahoo.com/quote/COKE/history?period1=1673122044&period2=1704658044&interval=1mo&filter=history&frequency=1mo&includeAdjustedClose=true");
@@ -22,6 +22,8 @@ public class DividendsApplication {
 
             Elements eles = document.getElementsByAttributeValue("data-test", "historical-prices");
             Element ele = eles.get(0);
+
+            Element tbody = ele.children().get(1);
 
             System.out.println(ele);
 
