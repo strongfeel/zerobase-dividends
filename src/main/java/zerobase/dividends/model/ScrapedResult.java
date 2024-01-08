@@ -8,13 +8,13 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class ScrapResult {
+public class ScrapedResult {
 
     private Company company;
 
     private List<Dividend> dividendEntities;
 
-    public void ScrapedResult() {
+    public ScrapedResult() {
         this.dividendEntities = new ArrayList<>();
     }
 }
