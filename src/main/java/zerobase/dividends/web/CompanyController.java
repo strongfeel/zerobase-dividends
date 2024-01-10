@@ -10,8 +10,6 @@ import zerobase.dividends.model.Company;
 import zerobase.dividends.persist.entity.CompanyEntity;
 import zerobase.dividends.service.CompanyService;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/company")
 @AllArgsConstructor
